@@ -213,7 +213,7 @@ public fun defaultRegexes(): Regexes =
                 familyReplacement = "Facebook",
             ),
             Regexes.UA(
-                regex = "^.{0,200}?(?:\\/[A-Za-z0-9\\.]{0,50}|) {0,2}([A-Za-z0-9 \\-_\\!\\[\\]:]{0,50}(?:[Aa]rchiver|[Ii]ndexer|[Ss]craper|[Bb]ot|[Ss]pider|[Cc]rawl[a-z]{0,50}))[/ ](\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|)",
+                regex = "^.{0,200}?(?:\\/[A-Za-z0-9\\.]{0,50}|) {0,2}([A-Za-z0-9 \\-_\\!\\[\\]:]{0,50}(?:[Aa]rchiver|[Ii]ndexer|[Ss]craper|[Bb]ot|[Ss]pider|[Cc]rawl[a-z]{0,50}))[\\/ ](\\d+)(?:\\.(\\d+)(?:\\.(\\d+)|)|)",
             ),
             Regexes.UA(
                 regex = "^.{0,200}?((?:[A-Za-z][A-Za-z0-9 -]{0,50}|)[^C][^Uu][Bb]ot)\\b(?:(?:[ /]| v)(\\d+)(?:\\.(\\d+)|)(?:\\.(\\d+)|)|)",

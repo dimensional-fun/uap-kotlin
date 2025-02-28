@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "gay.vzt"
-version = "1.0"
+version = "1.2"
 
 repositories {
     mavenCentral()
@@ -15,23 +15,30 @@ repositories {
 kotlin {
     explicitApi()
 
-    jvm {
-        jvmToolchain(8)
-    }
+    jvm()
+    jvmToolchain(8)
 
     js {
         nodejs()
         browser()
     }
 
-    linuxX64()
+    wasmJs {
+        nodejs()
+        browser()
+    }
 
+    wasmWasi {
+        nodejs()
+    }
+
+    linuxX64()
     linuxArm64()
 
     mingwX64()
 
     sourceSets["commonMain"].dependencies {
-        implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.0")
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.7.1")
     }
 }
 
